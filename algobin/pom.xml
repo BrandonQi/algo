@@ -3,9 +3,7 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>algo</groupId>
-  <artifactId>algobin</artifactId>
-  <version>algobin</version>
+  <groupId>org.bin.algobin</groupId>
 
   <name>Fabric8 :: Quickstarts :: Spring-Boot :: Camel REST / SQL</name>
   <description>Spring Boot example running a Camel REST route connecting to a SQL database</description>
@@ -159,4 +157,6 @@
     </plugins>
   </build>
 
+  <artifactId>algobin</artifactId>
+  <version>1.0</version>
 </project>

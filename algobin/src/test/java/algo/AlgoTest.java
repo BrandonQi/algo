@@ -1,26 +1,28 @@
 package algo;
 
-import org.apache.camel.CamelContext;
-import org.apache.camel.builder.NotifyBuilder;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class AlgoTest {
+	
     @Test
     public void algoTest() {
+    }
+    
+    @Test
+    public void longestAscSubArrTest() {
+    	int[] input1 = {7, 2, 3, 1, 5, 8, 9, 6};
+    	int[] input2 = {1, 2, 3, 3, 4, 4, 5};
+    	assertEquals(4, LongestAscSubArr.longestAscSubArr(input1));
+    	assertEquals(3, LongestAscSubArr.longestAscSubArr(input2));
+    }
+    
+    @Test
+    public void recusionCutTest() {
+    	int input1 = 12;
+    	int input2 = 5;
+    	assertEquals(81, CuttingRope.recusionCut(input1));
+    	assertEquals(6, CuttingRope.recusionCut(input2));
     }
 }
