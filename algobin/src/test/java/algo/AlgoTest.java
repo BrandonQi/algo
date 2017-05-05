@@ -11,6 +11,13 @@ public class AlgoTest {
     }
     
     @Test
+    public void findAllPrimeTest() {
+    	int input1 = 10;
+    	int input2 = 20;
+    	System.out.println(FindAllPrime.findAllPrime(input1));
+    	System.out.println(FindAllPrime.findAllPrime(input2));
+    }
+    @Test
     public void longestAscSubArrTest() {
     	int[] input1 = {7, 2, 3, 1, 5, 8, 9, 6};
     	int[] input2 = {1, 2, 3, 3, 4, 4, 5};
@@ -24,5 +31,6 @@ public class AlgoTest {
     	int input2 = 5;
     	assertEquals(81, CuttingRope.recusionCut(input1));
     	assertEquals(6, CuttingRope.recusionCut(input2));
+    	assertEquals(3, CuttingRope.recusionCut(input2));
     }
 }
