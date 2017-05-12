@@ -4,12 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CuttingRope {
-	/*
-	 *											5
-	 *					1(4)											2(3)
-	 *			1(3)            2(2)							
-	 */
-	
 	public static int recusionCut(int input) {
 		//sanity check 
 		if (input < 2) {
