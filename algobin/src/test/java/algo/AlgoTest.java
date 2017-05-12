@@ -33,4 +33,23 @@ public class AlgoTest {
     	assertEquals(6, CuttingRope.recusionCut(input2));
     	assertEquals(3, CuttingRope.recusionCut(input2));
     }
+    
+    @Test
+    public void reverseIntegerTest() {
+    	System.out.println((-18) % 10);
+    	System.out.println(ReverseInteger.reverseInteger(18));
+    	assertEquals(81, ReverseInteger.reverseInteger(18));
+    	System.out.println(ReverseInteger.reverseInteger(100));
+    	assertEquals(1, ReverseInteger.reverseInteger(100));
+    	System.out.println(ReverseInteger.reverseInteger(-123456));
+    	assertEquals(-654321, ReverseInteger.reverseInteger(-123456));
+    	System.out.println(ReverseInteger.reverseInteger(-1000000003));
+    	assertEquals(-1, ReverseInteger.reverseInteger(-1000000003));
+    }
+    
+    @Test
+    public void largestSumSubArrTest() {
+    	int[] input = {1, 2, 3, 4, -1, -2, -3, -4, 10, -1, -2, 6};
+    	assertEquals(13, LargestSumSubArr.largestSumSubArr(input));
+    }
 }
