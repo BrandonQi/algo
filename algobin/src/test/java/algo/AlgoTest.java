@@ -52,4 +52,10 @@ public class AlgoTest {
     	int[] input = {1, 2, 3, 4, -1, -2, -3, -4, 10, -1, -2, 6};
     	assertEquals(13, LargestSumSubArr.largestSumSubArr(input));
     }
+    
+    @Test
+    public void reverseWordsTest() {
+    	String input = "I love codding";
+    	assertEquals("codding love I", ReverseWords.reverseWords(input));
+    }
 }
