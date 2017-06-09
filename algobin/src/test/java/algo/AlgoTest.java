@@ -1,6 +1,7 @@
 package algo;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertArrayEquals;
 
 import org.junit.Test;
 
@@ -57,5 +58,13 @@ public class AlgoTest {
     public void reverseWordsTest() {
     	String input = "I love codding";
     	assertEquals("codding love I", ReverseWords.reverseWords(input));
+    }
+    
+    @Test
+    public void searchInSortedMatrixTest() {
+    	int[][] matrix = {{1, 2, 3, 4}};
+    	int target = 4;
+    	int[] result = SearchInSortedMatrix.search2(matrix, target);
+    	assertArrayEquals(new int[]{0,3}, result);
     }
 }

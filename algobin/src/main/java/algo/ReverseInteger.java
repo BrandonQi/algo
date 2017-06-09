@@ -11,12 +11,14 @@ public class ReverseInteger {
 		
 		while (input > 0) {
 			int lastDigit = input % 10;
+			
 			int tempResult = result * 10 + lastDigit;
 			//check overflow
 			if ((tempResult - lastDigit)/10 != result) {
 				return -1;
 			}
 			result = tempResult;
+			
 			input = input / 10;
 		}
 		return flag * result;

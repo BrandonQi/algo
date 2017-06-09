@@ -20,8 +20,8 @@ public class CuttingRope {
 		//recursion rule
 		int max = 0;
 		for (int i = 1; i < leftLength; i++) {
-			int best = Math.max(leftLength - i, recursionHelper(leftLength - i));
-			max = Math.max(max, i * best);
+			int maxLeft = Math.max(leftLength - i, recursionHelper(leftLength - i));
+			max = Math.max(max, i * maxLeft);
 		}
 		return max;
 	}
