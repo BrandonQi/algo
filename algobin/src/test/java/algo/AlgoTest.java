@@ -1,6 +1,9 @@
 package algo;
 
 import static org.junit.Assert.assertEquals;
+
+import java.util.Map;
+
 import static org.junit.Assert.assertArrayEquals;
 
 import org.junit.Test;
@@ -67,4 +70,50 @@ public class AlgoTest {
     	int[] result = SearchInSortedMatrix.search2(matrix, target);
     	assertArrayEquals(new int[]{0,3}, result);
     }
+    
+	@Test
+	public void testSplitToMap() {
+		String input = "{iri=http://nxta.us/aml/Data/Preload#Rule-ira.PatternsToFundTransferAlertObj1, id=def8635a-3122-412a-9364-4ea814aedf66, label=Patterns of Fund Transfer}";
+		Map<String, String> result = SplitToMap.splitToMap(input);
+		System.out.println(result.get("label"));
+	}
+	@Test
+	public void testFindDup() {
+        FindDuplicate duplicate = new FindDuplicate();
+        int arr[] = {20, 2, 4, 5, 2, 20, 1};
+        System.out.println("method 1:");
+        duplicate.findDup(arr);
+        System.out.println("method 2:");
+        duplicate.findDupArrIndex(arr);
+        System.out.println("method 3:");
+        duplicate.findDupBySort(arr);
+	}
+	@Test
+	public void testFirstNonRepeatChar() {
+		FirstNonRepeatChar fn = new FirstNonRepeatChar();
+		char c = fn.firstNotRepeatingCharacter("abacabad");
+		System.out.println(c);
+	}
+	@Test
+	public void testCompen() {
+		Compen fn = new Compen();
+		int c = fn.getIntegerComplement(100);
+		System.out.println(c);
+	}
+	@Test
+	public void testSwitchEvenOdd() {
+		SwitchEvenOdd fn = new SwitchEvenOdd();
+		int[] c = fn.switchEvenOdd(new int[]{0,1,0,1,0});
+		for (int i = 0;i < c.length;i++) {
+			System.out.print(c[i] + " ");
+		}
+	}
+	@Test
+	public void testRainbow() {
+		RainbowSort rb = new RainbowSort();
+		int[] c = rb.rainbowSort(new int[]{1,1,1,1,1,1,0,0,0,0,1,1,1,1,-1,-1,-1,0,0,0});
+		for (int i = 0;i < c.length;i++) {
+			System.out.print(c[i] + " ");
+		}
+	}
 }
