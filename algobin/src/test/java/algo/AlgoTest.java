@@ -15,6 +15,13 @@ public class AlgoTest {
     }
     
     @Test
+    public void compressStrTest() {
+    		CompressString cs = new CompressString();
+    		char[] input = {'a','a','b','b','c','c','c'};
+    		System.out.println(cs.compress(input));
+    }
+    
+    @Test
     public void findAllPrimeTest() {
     	int input1 = 10;
     	int input2 = 20;
